@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch> 
+<include file="$(find aruco_mapping_filter)/launch/aruco_mapping_filter.launch" />
+<param name="blocksize" type="int" value="175"/> <!-- 5 veraf, 17 dichtbij, 9 als comromis -->
+<param name="c" type="int" value="0"/> 
+
+<include file="$(find aruco_mapping)/launch/aruco_mapping_filter.launch" />
+<param name="calibration_file" type="string" value="/home/wouter/gmpm/calibration/ost.txt" /> 
+<param name="num_of_markers" type="int" value="250" />
+<param name="marker_size" type="double" value="0.045"/>
+<param name="space_type" type="string" value="3d" /> <!-- plane z=0 -->
+
+
+</launch>
